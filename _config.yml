@@ -1,0 +1,21 @@
+markdown	: kramdown
+highlighter	: pygments
+
+kramdown:
+  input: GFM
+
+# Author
+author: 
+  name: toyknight
+  image: /assets/images/author.jpg
+  email: toyknight@outlook.com
+  link: http://www.toyknight.net
+  github: http://github.com/toyknight
+
+# Site
+title: toyknight's Castle
+description: A bit of this and a bit of that :P
+url: http://www.toyknight.net
+
+disqus:
+  shortname: toyknight
