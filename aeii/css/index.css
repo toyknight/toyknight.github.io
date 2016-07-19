@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 15px;
+    background-color: #3F3F3F;
+}
+
+a {
+    color: lightskyblue;
+}
+
+#content {
+    background-color: #232944;
+    border: 16px solid transparent;
+    -webkit-border-image: url(../images/border.png) 16 stretch; /* Safari*/
+    -o-border-image: url(../images/border.png) 16 stretch; /* Opera*/
+    border-image: url(../images/border.png) 16 stretch;
+}
+
+.title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: inherit;
+    text-shadow: 3px 3px #000000
+}
+
+.text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: inherit;
+}
+
+.preview {
+    width: 318px;
+    height: 180px;
+}
+
+.copyright {
+    color: white;
+    font-style: italic;
+}
