@@ -4,7 +4,7 @@ var renderer = PIXI.autoDetectRenderer(240, 85);
 
 document.getElementById("logo").appendChild(renderer.view);
 
-requestAnimationFrame( animate );
+requestAnimationFrame(animate);
 
 var texture_logo = PIXI.Texture.fromImage("images/aeii_logo.png");
 var sprite_logo = new PIXI.Sprite(texture_logo);
@@ -29,9 +29,9 @@ container.addChild(sprite_glow);
 container.addChild(sprite_mask);
 
 function animate() {
-    requestAnimationFrame( animate );
+    requestAnimationFrame(animate);
     
-    if(sprite_glow.position.x < 1200) {
+    if (sprite_glow.position.x < 1200) {
         sprite_glow.position.x += 8;
     } else {
         sprite_glow.position.x = 0;
