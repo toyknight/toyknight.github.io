@@ -40,6 +40,11 @@ a {
     height: 180px;
 }
 
+.banner {
+    vertical-align: middle;
+    padding: 5px;
+}
+
 .copyright {
     color: white;
     font-style: italic;
