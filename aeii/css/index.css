@@ -8,13 +8,18 @@ a {
     color: lightskyblue;
 }
 
+.logo-container {
+    position: relative;
+}
+
 #logo {
     float: left;
 }
 
 #google-button {
-    float: right;
-    vertical-align: bottom;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
 }
 
 .clearfix {
