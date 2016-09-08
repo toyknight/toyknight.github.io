@@ -8,6 +8,19 @@ a {
     color: lightskyblue;
 }
 
+#logo {
+    float: left;
+}
+
+#google-button {
+    float: right;
+    vertical-align: bottom;
+}
+
+.clearfix {
+    clear: both;
+}
+
 #content {
     background-color: #232944;
     border: 16px solid transparent;
