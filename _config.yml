@@ -1,21 +1,50 @@
-markdown	: kramdown
-highlighter	: rouge
 
-kramdown:
-  input: GFM
+# Base URL
+baseurl: 
 
-# Author
-author: 
+# Site live URL
+url: http://toyknight.net
+
+harmony:
   name: toyknight
-  image: /assets/images/author.jpg
-  email: toyknight@outlook.com
-  link: http://www.toyknight.net
-  github: http://github.com/toyknight
+  description: Definitly a non-technical guy.
+  meta_description: > #
+    To be written
+    http://toyknight.net
+  basetheme: theme-base-01  # pre defined themes are darken, blue-water, redish.
+  #Author of harmony
+  author:
+    name: Gayan Virajith
+    email: gayanvirajith@gmail.com
+    url: http://gayanvirajith.github.io
+  
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: 
 
-# Site
-title: toyknight's Castle
-description: A bit of this and a bit of that :P
-url: http://www.toyknight.net
+  # Profile links, leave blank to ignore
+  social: 
+    github: toyknight
+    twitter: 54toyknight
+    facebook: 
+    gplus: 
+    dribble: 
+    pinterest: 
+  # Toggle disclaimer in footer
+  show_disclaimer: true
 
-disqus:
-  shortname: toyknight
+markdown: kramdown
+highlighter: pygments
+
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+style: :compressed
