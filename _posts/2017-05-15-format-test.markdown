@@ -43,3 +43,9 @@ A numbered list
 1. Item one
 2. Item two
 3. Item three
+
+emoji test
+
+I give jemoji two :+1:!
+
+:grinning: :satisfied: :yum:
