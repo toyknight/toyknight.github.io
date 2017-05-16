@@ -6,10 +6,10 @@ baseurl:
 url: http://toyknight.net
 
 harmony:
-  name: toyknight
-  description: Definitly NOT a technical guy.
+  name: net.toyknight.home
+  description: 
   meta_description: > #
-    To be written
+    Definitely NOT a tech blog.
     http://toyknight.net
   basetheme: theme-base-01  # pre defined themes are darken, blue-water, redish.
   #Author of harmony
@@ -33,7 +33,11 @@ harmony:
   show_disclaimer: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
+
+# Disqus
+disqus:
+  id: "toyknight"
 
 exclude: 
   - CNAME
