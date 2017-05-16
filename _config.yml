@@ -7,7 +7,7 @@ url: http://toyknight.net
 
 harmony:
   name: toyknight
-  description: Definitly a non-technical guy.
+  description: Definitly NOT a technical guy.
   meta_description: > #
     To be written
     http://toyknight.net
@@ -48,3 +48,6 @@ exclude:
 sass:
     sass_dir: assets/css/_sass
 style: :compressed
+
+gems:
+  - jemoji

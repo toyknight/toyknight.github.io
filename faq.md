@@ -4,5 +4,5 @@ title: Help / FAQ
 ---
 
 What is the best programming language in the word?
-: PHP of course ;)
+: PHP of course! :8):
 
