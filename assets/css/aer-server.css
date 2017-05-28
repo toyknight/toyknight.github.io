@@ -5,7 +5,11 @@ body {
 }
 
 a {
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: lightskyblue;
+    font-size: 20px;
+    font-family: inherit;
 }
 
 #content {
