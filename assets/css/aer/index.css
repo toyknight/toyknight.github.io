@@ -25,9 +25,9 @@ a {
 #content {
     background-color: #232944;
     border: 16px solid transparent;
-    -webkit-border-image: url(../images/border.png) 16 stretch; /* Safari*/
-    -o-border-image: url(../images/border.png) 16 stretch; /* Opera*/
-    border-image: url(../images/border.png) 16 stretch;
+    -webkit-border-image: url(/assets/images/aer/border.png) 16 stretch; /* Safari*/
+    -o-border-image: url(/assets/images/aer/border.png) 16 stretch; /* Opera*/
+    border-image: url(/assets/images/aer/border.png) 16 stretch;
 }
 
 .title {
