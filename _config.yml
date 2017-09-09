@@ -3,7 +3,7 @@
 baseurl: 
 
 # Site live URL
-url: http://toyknight.net
+url: https://toyknight.net
 
 harmony:
   name: net.toyknight.home
