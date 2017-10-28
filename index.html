@@ -1,5 +1,6 @@
 ---
 layout: default
+package: net.toyknight.home
 ---
 <div id="home" class="page-content wc-container">
 	<div class="posts">
@@ -10,7 +11,6 @@ layout: default
 			        {{ post.title }}
 			    </a>
     		</h3>
-
             <p class="post-meta">
             {% if (post.categories.size > 0 %}
                 <span class="categories">
@@ -18,10 +18,10 @@ layout: default
                 </span> |
             {% endif %}
             <span class="post-date">
-                {{ post.date | date: "%b %-d, %Y" }} 
+                {{ post.date | date: "%b %-d, %Y" }}
             </span>
-            </p>          
-    			    			
+            </p>
+
   			<p>{{ post.excerpt }}</p>
   			<p>
   				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
@@ -32,6 +32,6 @@ layout: default
   		{% endfor %}
 	</div>
 	<div class="post-footer">
-		<div class="column-full"><a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></div>
+		<div class="column-full"><a href="{{ '/blogs' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></div>
 	</div>
 </div>

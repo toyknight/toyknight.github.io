@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Blog archive
+title: Blog Archive
+package: net.toyknight.blogs
+permalink: /blogs
 ---
 <div class="page-content wc-container">
   <h1>Blog Archive</h1>  

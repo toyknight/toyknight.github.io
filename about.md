@@ -1,7 +1,8 @@
 ---
 layout: page
 title: About me
-permalink: /about/
+package: net.toyknight.about
+permalink: /about
 ---
 
 This guy is too lazy to write anything.

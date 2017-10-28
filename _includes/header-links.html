@@ -1,16 +1,19 @@
-<ul>
+<ul class="main-header-nav">
 	<li>
-		<a href="{{ '/aeii' | prepend: site.baseurl | prepend: site.url }}">Ancient Empires Reloaded</a><span>/</span>
+		<a href="/">Home</a>
 	</li>
 	<li>
-		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a><span>/</span>
+		<a href="/aeii">Ancient Empires Reloaded</a><span>|&nbsp;</span>
+	</li>
+	<li>
+		<a href="/about">About</a><span>|&nbsp;</span>
 	</li>
 	{% if site.harmony.social.github %}
 	<li>
-		<a title="{{ site.harmony.social.github }} on GitHub" 
+		<a title="{{ site.harmony.social.github }} on GitHub"
 			href="https://github.com/toyknight" target="_blank">
 			GitHub
-		</a><span>/</span>
+		</a><span>|&nbsp;</span>
 	</li>
 	{% endif %}
 </ul>
