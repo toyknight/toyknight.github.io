@@ -5,7 +5,7 @@ date:   2017-05-15
 description: Simply for testing format of the posts.
 categories:
 - blog
-package: net.toyknight.article
+package: net.toyknight.post
 permalink: /format-test
 comments: true
 ---
