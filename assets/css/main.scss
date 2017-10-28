@@ -223,7 +223,8 @@ header.main-header {
   ul li a {
     display:inline-block;
     color: inherit;
-    border-bottom: 1px transparent solid;
+    padding-bottom: 5px;
+    border-bottom: 2px transparent solid;
     @include transition(all, .2s);
     @include MQ(M) {
       @include font-size(18px);

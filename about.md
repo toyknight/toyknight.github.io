@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me
+title: About Me
 package: net.toyknight.about
 permalink: /about
 ---
