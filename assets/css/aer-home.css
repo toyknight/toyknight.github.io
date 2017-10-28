@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 15px;
+    vertical-align: baseline;
     background-color: #3F3F3F;
 }
 
@@ -28,6 +29,12 @@ a {
     -webkit-border-image: url(/assets/images/aer/border.png) 16 stretch; /* Safari*/
     -o-border-image: url(/assets/images/aer/border.png) 16 stretch; /* Opera*/
     border-image: url(/assets/images/aer/border.png) 16 stretch;
+}
+
+.wc-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .title {
