@@ -20,6 +20,7 @@
                 <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftoyknight.net%2Faeii%2F&width=100&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId"
                     width="120" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </a>
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
             <a>
                 <g:plusone size="medium"></g:plusone>
             </a>
@@ -87,6 +88,23 @@
     <p class="copyright" align="right">&copy; 2015-2017 toyknight</p>
 
     <script src="{{ site.baseurl }}/assets/js/aer/logo.js"></script>
+    <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+      return t;
+    }(document, "script", "twitter-wjs"));
+    </script>
 </div>
 </body>
 

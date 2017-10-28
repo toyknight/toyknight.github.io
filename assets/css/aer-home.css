@@ -31,6 +31,10 @@ a {
     border-image: url(/assets/images/aer/border.png) 16 stretch;
 }
 
+.twitter-share-button {
+  padding-right: 10px;
+}
+
 .wc-container {
     width: 100%;
     max-width: 800px;
