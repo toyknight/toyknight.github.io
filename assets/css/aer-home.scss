@@ -1,3 +1,9 @@
+---
+---
+
+// Import layout mixin
+@import "partials/layout";
+
 body {
     margin: 0;
     padding: 15px;
@@ -37,7 +43,7 @@ a {
 
 .wc-container {
     width: 100%;
-    max-width: 800px;
+    max-width: $M;
     margin: 0 auto;
 }
 
