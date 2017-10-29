@@ -6,7 +6,7 @@ description: Simply for testing format of the posts.
 categories:
 - blog
 package: net.toyknight.post
-permalink: format-test
+permalink: /format-test/
 comments: true
 ---
 
