@@ -5,4 +5,8 @@ package: net.toyknight.about
 permalink: /about/
 ---
 
-This guy is too lazy to write anything.
+* A would-be Java expert.
+* A half-baked Android engineer.
+* A passionate indie game developer.
+* A really bad gamer.
+* An ardent admirer to all game artists.
