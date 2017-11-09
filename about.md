@@ -8,5 +8,5 @@ permalink: /about/
 * A would-be Java expert.
 * A half-baked Android engineer.
 * A rookie indie game developer.
-* A really bad gamer.
+* A clumsy game player.
 * An ardent admirer to all game artists.
