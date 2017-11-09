@@ -106,12 +106,12 @@ listener = new ViewPager.OnPageChangeListener() {
 
     @Override
     public void onPageSelected(int position) {
-        if (0 == position) {
+        if (position == 0) {
             //prepare to jump to the last page
             jumpPosition = adapter.getRealCount();
 
             //TODO: indicator.setActive(adapter.getRealCount() - 1)
-        } else if (adapter.getRealCount() + 1 == position) {
+        } else if (position == adapter.getRealCount() + 1) {
             //prepare to jump to the first page
             jumpPosition = 1;
 
