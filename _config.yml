@@ -1,13 +1,13 @@
 
 # Base URL
-baseurl: 
+baseurl:
 
 # Site live URL
 url: https://toyknight.net
 
 harmony:
   name: net.toyknight.home
-  description: 
+  description:
   meta_description: > #
     Definitely NOT a tech blog.
     http://toyknight.net
@@ -17,18 +17,18 @@ harmony:
     name: Gayan Virajith
     email: gayanvirajith@gmail.com
     url: http://gayanvirajith.github.io
-  
+
   # Google Analytics key, leave blank to ignore
-  google_analytics_key: 
+  google_analytics_key:
 
   # Profile links, leave blank to ignore
-  social: 
+  social:
     github: toyknight
-    twitter: 54toyknight
-    facebook: 
-    gplus: 
-    dribble: 
-    pinterest: 
+    twitter: lg_gong
+    facebook:
+    gplus:
+    dribble:
+    pinterest:
   # Toggle disclaimer in footer
   show_disclaimer: true
 
@@ -39,7 +39,7 @@ highlighter: rouge
 disqus:
   id: "toyknight"
 
-exclude: 
+exclude:
   - CNAME
   - Gemfile
   - Rakefile
