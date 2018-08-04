@@ -5,7 +5,7 @@
 */
 
 var disqus_config = function () {
-this.page.url = '{{ \'/\' | prepend: site.baseurl | prepend: site.url }}';
+this.page.url = '{{ page.permalink | prepend: site.baseurl | prepend: site.url }}';
 this.page.identifier = '{{ page.permalink }}';
 };
 
