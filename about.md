@@ -5,8 +5,8 @@ package: net.toyknight.about
 permalink: /about/
 ---
 
-* A would-be Java expert.
-* A half-baked Android engineer.
-* A rookie indie game developer.
-* A clumsy game player.
-* An ardent admirer to game artists.
+* A would-be Java Standard Edition expert
+* A half-baked Android dev
+* An amateur game dev trying to learn 3D programming
+* A hopeless turn-based game fan
+* An ardent admirer to game artists
