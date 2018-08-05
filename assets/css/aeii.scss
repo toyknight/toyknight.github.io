@@ -15,14 +15,12 @@ a {
     color: lightskyblue;
 }
 
-#logo {
-    float: left;
+#header {
+    text-align:center;
 }
 
 #button-container {
-    position: absolute;
-    bottom: 7px;
-    right: 0;
+    margin-bottom: 1em;
 }
 
 .clearfix {
