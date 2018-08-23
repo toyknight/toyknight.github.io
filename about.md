@@ -1,9 +1,11 @@
 ---
 layout: page
-title: About Me
+title: toyknight.about
 package: net.toyknight.about
 permalink: /about/
 ---
+
+# About Me
 
 * A would-be Java Language expert
 * A half-baked Android dev
