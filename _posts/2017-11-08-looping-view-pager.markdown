@@ -135,7 +135,7 @@ listener = new ViewPager.OnPageChangeListener() {
 };
 {% endhighlight %}
 
-*There's a small trick here.* Due to the way ViewPager is implemented, there's no
+**NOTE:** Due to the way ViewPager is implemented, there's no
 way you can completely swipe to the next page. So when touch up, the ViewPager
 will determine the next page according to your scroll position and animate to it.
 The bad part about this is that, `onPageSelected` is hit when the animation
