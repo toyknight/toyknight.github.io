@@ -11,4 +11,3 @@ permalink: /about/
 * A half-baked Android dev
 * An amateur game dev trying to learn 3D programming
 * A hopeless turn-based game fan
-* An ardent admirer to game artists
