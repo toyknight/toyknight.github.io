@@ -33,6 +33,8 @@ html * {
 }
 
 body {
+  color: $color-text-primary;
+  background-color: $base-01;
   font: {
     size: 100%;
     family: $primary-font; // variables inside partials > _variables.scss
@@ -67,7 +69,7 @@ body {
 --------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.6;
+  line-height: 1.15em;
 }
 
 h1 {
@@ -76,7 +78,6 @@ h1 {
   @include MQ(M) {
     @include font-size(36px);
   }
-  font-family: $h1-font;
 }
 
 h2 {
@@ -88,6 +89,7 @@ h2 {
 }
 
 h3 {
+  // mobile first
   @include font-size(15px);
   @include MQ(M) {
     @include font-size(30px);
@@ -95,20 +97,23 @@ h3 {
 }
 
 h4 {
-  @include font-size(16px);
+  // mobile first
+  @include font-size(12px);
   @include MQ(M) {
     @include font-size(24px);
   }
 }
 
 h5 {
-  @include font-size(14px);
+  // mobile first
+  @include font-size(11px);
   @include MQ(M) {
     @include font-size(22px);
   }
 }
 
 h6 {
+  // mobile first
   @include font-size(14px);
   @include MQ(M) {
     @include font-size(19px);
@@ -116,15 +121,9 @@ h6 {
 }
 
 p {
-  line-height: 1.6;
-  @include font-size(14px);
-  @include MQ(M) {
-    @include font-size(18px);
-  }
-}
-
-a {
-  background: transparent;
+  line-height: 1.7em;
+  // mobile first
+  font-size: 100%;
 }
 
 a:active, a:hover, a:focus {
@@ -137,7 +136,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 hr {
   margin-top: 20px;
@@ -152,6 +150,7 @@ strong, b { font-weight: 600; }
 
 /* italic */
 em, i { font-style: italic; }
+
 /* --------------------------------
 
  Theme base
@@ -161,210 +160,41 @@ em, i { font-style: italic; }
 // default
 
 a.default-anchor {
-
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  color: $base-08;
-  &:hover, &:active, &:focus {
-    @include transition(border-bottom-color .2s);
-    border-bottom-color: $base-08;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid;
+  border-bottom-color: $color-link-active;
+  color: $color-link-text;
+  &:hover, &:focus, &:active {
+    background: $color-link-active;
+    color: $color-text-primary;
   }
-
-}
-
-div.default-page-content {
-  h1, h2, h3, h4, h5, h6 { color: $base-00; }
-}
-
-body {
-  color: $color-2;
 }
 
 a {
   @extend .default-anchor;
 }
 
-header.main-header, footer.main-footer {
-  p,address {
-    @include font-size(12px);
-    @include MQ(M) {
-      @include font-size(14px);
-    }
-  }
+.post-title a {
+    color: $color-link-title;
+}
+
+a[href*="://"]::after, a[rel*="external"] {
+  content: " " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23ff9800'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");
 }
 
 header.main-header {
-  color: $base-00;
-  border-top: 5px $base-00 solid;
-
-  h1, h2 { text-align: center; color: inherit;}
-  a {
-    color: inherit;
-    &:hover, &:active, &:focus {
-      border-bottom-color: transparent;
-    }
-  }
-
   ul {
     width: 100%;
-    text-align: center;
   }
+
   ul li {
     display: inline-block;
     position:relative;
-    color: $base-08;
   }
-
-  ul li span {
-    float: left;
-    display: inline-block;
-    width: 15px;
-  }
-
-  ul li a {
-    display:inline-block;
-    color: inherit;
-    padding-bottom: 5px;
-    border-bottom: 2px transparent solid;
-    @include transition(all, .2s);
-    @include MQ(M) {
-      @include font-size(18px);
-    }
-    &:hover, &:focus, &:active {
-      border-bottom-color: inherit;
-    }
-  }
-}
-
-footer.main-footer {
-  background-color: $base-00;
-  color: $base-07;
-  .column {
-    float:left;
-    @include column(1);
-
-    @include MQ(M) {
-      &.one, &.two {
-        @include column(.5);
-        display: block;
-      }
-    }
-  }
-
-  h6 {
-      position: relative;
-      padding: 10px 0;
-      text-transform: uppercase;
-  }
-  h6::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 2em;
-      height: 2px;
-      background: $base-07;
-      overflow: hidden;
-  }
-
-  ul.menu {
-    padding: 0 0 1em 0;
-    li {
-      @include font-size(12px);
-      line-height: 1.6;
-      display: inline;
-      padding-right: 10px;
-      @include MQ(M) {
-        @include font-size(16px);
-      }
-    }
-  }
-
-  p.disclaimer {
-    text-align: right;
-  }
-
- ul.social-media {
-  text-align:left;
-  padding: 0 0 10px 0;
-  li {
-    display:inline-block;
-  }
-  li > a {
-    width: 32px;
-    height: 32px;
-    background: $base-07;
-    background-image: url("/assets/images/socials-icons.svg");
-    background-size: 224px 64px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
-
-    &:hover {
-      background-color: $base-08;
-    }
-  }
-
-  li a.twitter {
-    background-position: 0 0;
-      &:hover {
-        background-position: 0 -32px;
-    }
-  }
-
-  li a.github {
-    background-position: -32px 0;
-    &:hover {
-      background-position: -32px -32px;
-    }
-  }
-
-  li a.facebook {
-    background-position: -64px 0;
-    &:hover {
-      background-position: -64px -32px;
-    }
-  }
-
-  li a.dribble {
-    background-position: -96px 0;
-    &:hover {
-      background-position: -96px -32px;
-    }
-  }
-
-  li a.google {
-    background-position: -128px 0;
-    &:hover {
-      background-position: -128px -32px;
-    }
-  }
-
-  li a.pinterest {
-      background-position: -196px 0;
-      &:hover {
-        background-position: -196px -32px;
-      }
-    }
-  }
-}
-
-.no-svg footer.main-footer ul.social-media li a {
-  width: 32px;
-    height: 32px;
-    background-color: $base-07;
-    background-image: url("/assets/images/socials-icons.png");
-    background-size: 224px 64px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
-
-    &:hover {
-      background-color: $base-08;
-    }
 }
 
 div.page-content {
-  @extend .default-page-content;
   min-height: initial;
 
   @include MQ(M) {
@@ -377,7 +207,6 @@ div.page-content {
     padding: 0 0 1em 0;
     li {
       @include font-size(14px);
-      color: $color-2;
       line-height: 1.6;
       background: url("/assets/images/bullet.svg");
       background-repeat: no-repeat;
@@ -385,138 +214,37 @@ div.page-content {
       padding: 0 0 5px 15px;
       margin-left: 0;
     }
-    @include MQ(M){
-      li {
-        @include font-size(16px);
-        line-height: 1.5;
-        background-position: 0 7px;
-      }
-    }
-  }
-  ol {
-    @include font-size(12px);
-    // padding-top: 1em;
-    padding-bottom: 1em;
-    list-style: decimal;
-    margin-left: 0;
-    li {
-      color: $color-2;
-      line-height: 1.6;
-      padding: 0 0 5px 0px;
-      margin-left: 2em;
-      position:relative;
-    }
-    @include MQ(M){
-      @include font-size(16px);
-      li {
-        line-height: 1.5;
-        background-position: 0 7px;
-      }
-    }
-  }
-
-  dl {
-    padding-bottom: 1em;
-    dt, dd {
-      @include font-size(12px);
-      line-height: 1.5;
-    }
-
-    dt {
-      font-weight: bold;
-      padding-bottom: 5px;
-      padding-top: 20px;
-    }
-
-    dt:first-child {
-      padding-top: 0px;
-    }
-
-    dd {
-      padding-left: 10px;
-    }
-
     @include MQ(M) {
-      dt, dd {
+      li {
         @include font-size(16px);
-        line-height: 1.6;
+        line-height: 1.5;
+        background-position: 0 7px;
       }
     }
   }
 
   img {
-    padding: 1em 0;
-  }
-
-  p {
-    margin-bottom: 1em;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    padding-bottom: 5px;
-  }
-}
-
-.no-svg div.page-content ul li {
-  background: url("/assets/images/bullet.png");
-  @include font-size(13px);
-  color: $color-2;
-  line-height: 1.6;
-  background-repeat: no-repeat;
-  background-position: 0 6px;
-  padding: 0 0 5px 15px;
-  margin-left: 0;
-}
-
-// Theme base 01
-body.theme-base-01 {
-
-  a {
-    @extend .default-anchor;
-  }
-
-  footer.main-footer {
-    background-color: $base-01;
-    color: $base-07;
-  }
-
-  header.main-header {
-    color: $base-01;
-    ul li {
-      color: $base-08;
+    padding: 0.25em 0;
+    @include MQ(M) {
+      padding: 0.5em 0;
     }
+    display: inline;
   }
-
-  div.page-content {
-    h1, h2, h3, h4, h5, h6 { color: $base-01; }
-  }
-
-
 }
 
 /* --------------------------------
 
- Main Header
+ Main Header & Footer
 
 --------------------------------- */
 
 header.main-header {
   padding: 1em 0;
-  @include MQ(M) { padding: 0 0 2em 0; }
+  @include MQ(M) { padding: 2em 0; }
 }
 footer.main-footer {
   padding: 1em 0;
   @include MQ(M) { padding: 2em 0; }
-}
-.page-content {
-  padding: 1em 0;
-  @include MQ(M) { padding: 2em 0; }
-}
-.main-header-title {
-  padding: 15px;
-}
-.main-header-nav {
-  // border-bottom: 2px solid $base-05;
 }
 
 /* ---------------------------------
@@ -565,8 +293,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: $base-07;
-  border: 1px solid $base-05;
+  background-color: #2b303b;
   code {
     padding: 0;
     font-size: 100%;
@@ -581,7 +308,6 @@ pre {
 
 .highlight {
   margin-bottom: 1em;
-  margin-top: 1em;
   pre {
     margin-bottom: 0;
   }
@@ -621,129 +347,45 @@ Post styles
 div.post {
   padding-top: .5em;
   padding-bottom: 1em;
-  border-bottom: 1px $base-05 solid;
   @include MQ(M) {
-
     padding-bottom: 2em;
   }
-
-  &:last-child {
-    border-bottom: none;
-  }
 }
+
 p.post-meta {
   line-height: 1.6;
   letter-spacing: 2px;
-  @include font-size(12px);
   overflow: hidden;
   display: block;
-  padding: 1em 0;
-  color: #7A7A7A;
+  color: #9c9c9c;
+  padding: .5em 0;
+  @include font-size(14px);
   @include MQ(M) {
+    padding: 1em 0;
     @include font-size(16px);
   }
 }
 
-/* --------------------------------
-
-Project styles
-
---------------------------------- */
-div.project {
-  padding-top: .5em;
-  padding-bottom: 1em;
-  border-bottom: 1px $base-05 solid;
+p.post-description {
+  line-height: 1.6;
+  font-size: 100%;
+  padding-bottom: 0.1em;
   @include MQ(M) {
-
-    padding-bottom: 2em;
-  }
-
-  &:last-child {
-    border-bottom: none;
+    padding-bottom: 0.2em;
   }
 }
 
-/* --------------------------------
-
- Related post
-
---------------------------------- */
-.related {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-top: 1px solid $base-05;
-
+div.post-content h1, h2, h3, h4, h5, h6 {
+  padding-bottom: 0.2em;
   @include MQ(M) {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 0.4em;
   }
 }
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-}
-.related-posts h3 {
-  margin-top: 0;
-}
-.related-posts li small {
-  font-size: 75%;
-  color: #999;
-}
-.related-posts li a:hover {
-  color: #268bd2;
-  text-decoration: none;
-}
-.related-posts li a:hover small {
-  color: inherit;
-}
 
-/* --------------------------------
-
- Post footer
-
---------------------------------- */
-.post-footer {
-
-  border-top: 1px solid $base-05;
-  border-bottom: 1px solid $base-05;
-  height: 40px;
-  display: table;
-  width: 100%;
-  position: relative;
-
+div.post-content p {
+  padding-bottom: 0.5em;
   @include MQ(M) {
-    height: 80px;
-  }
-
-  .column-1, .column-2, .column-3, .column-full {
-    padding-top: 10px;
-    @include MQ(M) {
-      padding-top: 30px;
-    }
-    span { color: $base-04; }
-    a,span {
-      @include font-size(12px);
-      @include MQ(M) {
-        @include font-size(16px);
-      }
-    }
-  }
-
-  .column-1 {
-    text-align: left;
-    @include column(.3333);
-  }
-  .column-2 {
-    text-align: center;
-    @include column(.3333);
-  }
-  .column-3 {
-    text-align: right;
-    @include column(.3333);
-  }
-  .column-full {
-    text-align: center;
-    width: 100%;
+    padding-bottom: 1em;
   }
 }
 
@@ -763,10 +405,6 @@ th {
   padding: .25em .5em;
   border: 1px solid $base-04;
 }
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
-  background-color: $base-05;
-}
 
 /* -----------------------------------
 
@@ -777,4 +415,11 @@ img.emoji {
   display: inline-block;
   vertical-align: text-bottom;
   padding: 0 !important;
+}
+
+@-moz-document domain("disqus.com")
+{
+  body {
+    color: $color-text-primary !important;
+  }
 }

@@ -10,7 +10,7 @@ permalink: /looping-view-pager/
 comments: true
 ---
 
-## What the internet tells us...
+#### What internet tells us...
 
 It looks like that the most popular answer on the internet for
 implementing a looping/infinite ViewPager in Android is as shown below.
@@ -30,25 +30,24 @@ public class LoopingViewPagerAdapter extends PagerAdapter {
 }
 {% endhighlight %}
 
-My face was like :thinking: when I first saw this approach. Anyway, after some
+I was like :thinking: when I first saw this approach. Anyway, after some
 research I finally found a correct way to implement this thing.
 
-## How to implement it correctly
+#### Correct Approach
 
 The idea is quite simple. Let's assume we have three pages A, B, C. The way
 we want to put them in the ViewPager is like this:
 
-**[C][A][B][C][A]**
+`[C][A][B][C][A]`
 
-* *We start with position 1.*
-* *When hit position 0 -> jump to position 3.*
-* *When hit position 4 -> jump to position 1.*
+* We start with position 1.
+* When hit position 0 -> jump to position 3.
+* When hit position 4 -> jump to position 1.
 
-Okay now let's get to the code.
-
-**The Adapter**
+#### Let's Get to Code
 
 {% highlight java %}
+/* Adapter */
 public class LoopingViewPagerAdapter extends PagerAdapter {
 
     private ArrayList<Object> models;
@@ -90,9 +89,8 @@ public class LoopingViewPagerAdapter extends PagerAdapter {
 }
 {% endhighlight %}
 
-**The Listener**
-
 {% highlight java %}
+/* Listener */
 listener = new ViewPager.OnPageChangeListener() {
 
     private int jumpPosition = -1;
@@ -123,8 +121,7 @@ listener = new ViewPager.OnPageChangeListener() {
 
     @Override
     public void onPageScrollStateChanged(int state) {
-        //Let's wait for the animation to be completed then do the jump (if we do this in
-        //onPageSelected(int position) scroll animation will be canceled).
+        //Let's wait for the animation to complete then do the jump.
         if (state == ViewPager.SCROLL_STATE_IDLE && jumpPosition >= 0) {
             //Jump without animation so the user is not aware what happened.
             viewPager.setCurrentItem(jumpPosition, false);
@@ -143,9 +140,8 @@ starts. So if you do the jump here you will cancel scroll animation and it will
 look weird. The better solution is to wait for the animation to complete and
 then do the jump.
 
-**Putting Things Together**
-
 {% highlight java %}
+/* Putting things together */
 viewPager = (ViewPager) findViewById(R.id.view_pager_id);
 viewPager.addOnPageChangeListener(listener);
 

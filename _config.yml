@@ -53,5 +53,5 @@ sass:
     sass_dir: assets/css/_sass
 style: :compressed
 
-gems:
+plugins:
   - jemoji
