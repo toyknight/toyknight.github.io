@@ -1,13 +1,13 @@
 ---
-layout: project
+layout: post
 title:  "Ancient Empires Reloaded"
 date:   2017-10-01
 description: Ancient Empires Reloaded is a remastered version of old J2ME game <a href="https://en.wikipedia.org/wiki/Ancient_Empires_(mobile_game)">Ancient Empires Series</a>. Featuring all the original/newly added campaigns, in-game map editor, map sharing center, online multiplayer mode and more.
 categories:
 - project
 package: net.toyknight.posts
-permalink: /aeii/
-comments: true
+permalink: /aeii
+comments: false
 ---
 
 #### Overview

@@ -5,7 +5,6 @@ date:   2017-11-08
 description: How to correctly implement a looping/infinite ViewPager in Android.
 categories:
 - blog
-package: net.toyknight.posts
 permalink: /looping-view-pager/
 comments: true
 ---
