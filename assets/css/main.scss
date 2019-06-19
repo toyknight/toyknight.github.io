@@ -90,32 +90,40 @@ h2 {
 
 h3 {
   // mobile first
-  @include font-size(15px);
+  font-weight: bold;
+  font-size: 100%;
   @include MQ(M) {
+    font-weight: normal;
     @include font-size(30px);
   }
 }
 
 h4 {
   // mobile first
-  @include font-size(12px);
+  font-weight: bold;
+  font-size: 100%;
   @include MQ(M) {
+    font-weight: normal;
     @include font-size(24px);
   }
 }
 
 h5 {
   // mobile first
-  @include font-size(11px);
+  font-weight: bold;
+  font-size: 100%;
   @include MQ(M) {
+    font-weight: normal;
     @include font-size(22px);
   }
 }
 
 h6 {
   // mobile first
-  @include font-size(14px);
+  font-weight: bold;
+  font-size: 100%;
   @include MQ(M) {
+    font-weight: normal;
     @include font-size(19px);
   }
 }
