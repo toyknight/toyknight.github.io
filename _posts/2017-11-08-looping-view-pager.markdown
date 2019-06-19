@@ -44,7 +44,7 @@ we want to put them in the ViewPager is like this:
 * When hit position 0 -> jump to position 3.
 * When hit position 4 -> jump to position 1.
 
-#### Let's Get to Code
+#### Let's Get to Codes
 
 {% highlight java %}
 /* Adapter */
