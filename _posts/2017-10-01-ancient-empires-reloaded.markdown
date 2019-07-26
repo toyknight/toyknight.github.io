@@ -6,7 +6,7 @@ description: Ancient Empires Reloaded is a remastered version of old J2ME game <
 categories:
 - project
 package: net.toyknight.posts
-permalink: /aeii
+permalink: /aeii/
 comments: false
 ---
 
