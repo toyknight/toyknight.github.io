@@ -59,6 +59,9 @@ body{
     text-align:center;
     border-bottom:1px solid #eee
 }
+.main-header-nav {
+    margin: 0;
+}
 header.main-header ul li {
     display: inline-block;
     position: relative;
