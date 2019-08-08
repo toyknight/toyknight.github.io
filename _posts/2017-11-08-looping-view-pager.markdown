@@ -9,7 +9,7 @@ permalink: /looping-view-pager/
 comments: true
 ---
 
-#### What internet tells us...
+## What internet tells us...
 
 It looks like that the most popular answer on the internet for
 implementing a looping/infinite ViewPager in Android is as shown below.
@@ -32,7 +32,7 @@ public class LoopingViewPagerAdapter extends PagerAdapter {
 I was like :thinking: when I first saw this approach. Anyway, after some
 research I finally found a correct way to implement this thing.
 
-#### Correct Approach
+## Correct Approach
 
 The idea is quite simple. Let's assume we have three pages A, B, C. The way
 we want to put them in the ViewPager is like this:
@@ -43,7 +43,7 @@ we want to put them in the ViewPager is like this:
 * When hit position 0 -> jump to position 3.
 * When hit position 4 -> jump to position 1.
 
-#### Let's Get to Codes
+## Let's Get to Codes
 
 {% highlight java %}
 /* Adapter */
@@ -98,13 +98,13 @@ listener = new ViewPager.OnPageChangeListener() {
     public void onPageScrolled(int position,
                                float positionOffset,
                                int positionOffsetPixels) {
-        //We do nothing here.
+        // We do nothing here.
     }
 
     @Override
     public void onPageSelected(int position) {
         if (position == 0) {
-            //prepare to jump to the last page
+            // prepare to jump to the last page
             jumpPosition = adapter.getRealCount();
 
             //TODO: indicator.setActive(adapter.getRealCount() - 1)
@@ -121,10 +121,12 @@ listener = new ViewPager.OnPageChangeListener() {
     @Override
     public void onPageScrollStateChanged(int state) {
         //Let's wait for the animation to complete then do the jump.
-        if (state == ViewPager.SCROLL_STATE_IDLE && jumpPosition >= 0) {
-            //Jump without animation so the user is not aware what happened.
+        if (jumpPosition >= 0 
+                && state == ViewPager.SCROLL_STATE_IDLE) {
+            // Jump without animation so the user is not 
+            // aware what happened.
             viewPager.setCurrentItem(jumpPosition, false);
-            //Reset jump position.
+            // Reset jump position.
             jumpPosition = -1;
         }
     }
