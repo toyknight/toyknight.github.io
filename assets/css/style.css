@@ -64,8 +64,7 @@ header.main-header ul li {
     position: relative;
 }
 .main-header-nav {
-    margin-left: 0;
-    margin-right: 0;
+    padding: 0;
 }
 
 /* Texts */
@@ -391,5 +390,5 @@ img.emoji {
     display: inline-block;
     vertical-align: text-bottom;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 0 0 0.2rem !important;
 }
