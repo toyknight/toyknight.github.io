@@ -63,6 +63,10 @@ header.main-header ul li {
     display: inline-block;
     position: relative;
 }
+.main-header-nav {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /* Texts */
 h1,h2,h3,h4,h5,h6{
@@ -387,4 +391,5 @@ img.emoji {
     display: inline-block;
     vertical-align: text-bottom;
     padding: 0 !important;
+    margin: 0 !important;
 }
