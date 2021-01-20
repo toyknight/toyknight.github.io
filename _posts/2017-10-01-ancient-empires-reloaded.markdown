@@ -32,4 +32,4 @@ Ancient Empires Reloaded is a fan-made game created by toyknight, and also is, a
 ## Downloads
 
 * [Download from Google Play Store](https://play.google.com/store/apps/details?id=net.toyknight.aeii.android)
-* [Download from Apple App Store](https://apps.apple.com/app/id1202568287)
+* ~~[Download from Apple App Store](https://apps.apple.com/app/id1202568287)~~
